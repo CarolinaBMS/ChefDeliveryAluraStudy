@@ -9,8 +9,6 @@ import SwiftUI
 
 struct OrderTypeGridView: View {
     
-    //lista de strings dos titulos de cada item
-    let orders = ["Restaurantes", "Farmácia", "Descontos", "Gourmet", "Mercados", "Pet", "Bebidas"]
     
     var body: some View {
         // Forma uma grade de elementos
@@ -20,8 +18,8 @@ struct OrderTypeGridView: View {
             GridItem(.fixed(100))
         ], content: {
             //loop
-            ForEach(orders, id: \.self) { orderItem in
-                Text(orderItem)
+            ForEach(ordersMock) { orderItem in
+                Text(orderItem.name)
             }
         })
     }
